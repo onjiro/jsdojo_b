@@ -23,8 +23,7 @@ AppView = (function() {
             
         },
         startPomodoro : function(){
-            
-            this.changeButtonLabel();
+            this.curerntPomodoro.start();
         }
         
     });
