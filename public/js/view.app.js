@@ -10,12 +10,20 @@ AppView = (function() {
                 }),
                 el: $('#current_time'),
             });
+            this.currentPomodoro.on('change', function(){
+                if(this.currentPomodoro.get('status') === 'notstarted'){
+                    $('#start-pomodoro').html('スタート！');
+                } else if (this.currentPomodoro.get('status') === 'started'){
+                    $('#start-pomodoro').html('中断！');
+                }
+            }, this);
         },
         
         changeButtonLabel : function(){
-            $('#start-pomodoro').html('中断！');
+            
         },
         startPomodoro : function(){
+            
             this.changeButtonLabel();
         }
         
