@@ -8,10 +8,13 @@ AppView = (function() {
             this.currentPomodoro = new Pomodoro({
                 remainSeconds: this.model.pomounit,
             });
-            
-            new CountdownView({
-                model: this.currentPomodoro,
-                el: $('#current_time'),
+
+        },
+        
+        startPomodoro : function(){
+            this.currentPomodoro = new Pomodoro({
+                remainSeconds: this.model.pomounit,
+
             });
             
             this.currentPomodoro.on('change', function(){
@@ -21,19 +24,18 @@ AppView = (function() {
                     $('#start-pomodoro').html('中断！');
                 }
             }, this);
-            
+
             this.currentPomodoro.on('start', function(){
                 var newListHtml = '<li>done1</li>';
             }, this);
-        },
-        
-        changeButtonLabel : function(){
             
-        },
-        startPomodoro : function(){
+            new CountdownView({
+                model: this.currentPomodoro,
+                el: $('#current_time'),
+            });
+
             this.currentPomodoro.start();
         }
-        
     });
 })();
 
