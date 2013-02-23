@@ -3,19 +3,20 @@ AppView = (function() {
         events: {
             "click #start-pomodoro" : "startPomodoro"
         },
-        
-        startPomodoro : function(){
-            new CountdownView({
+        initialize: function() {
+            this.currentPomodoro = new CountdownView({
                 model: new Pomodoro({
-                    remainSeconds: 25 * 60 * 1000,
+                    remainSeconds: this.model.pomounit,
                 }),
                 el: $('#current_time'),
             });
-            this.changeButtonLabel();
         },
         
         changeButtonLabel : function(){
             $('#start-pomodoro').html('中断！');
+        },
+        startPomodoro : function(){
+            this.changeButtonLabel();
         }
         
     });

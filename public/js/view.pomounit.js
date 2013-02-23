@@ -10,13 +10,3 @@ PomoUnit = (function() {
         
     });
 })();
-
-
-$(function(){
-    
-    var pomounit = new PomoUnit({
-        el:document,
-        model:new AppModel()
-    });
-    
-});

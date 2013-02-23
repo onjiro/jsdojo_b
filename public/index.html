@@ -63,9 +63,15 @@
 </body>
 <script>
 $(function(){
-    
-    var appview = new AppView({el:document});
-    
+    var app = new AppModel();
+    var appview = new AppView({
+        model: app,
+        el:document
+    });
+    var pomounit = new PomoUnit({
+        model: app,
+        el: document,
+    });
 });
 </script>
 </html>
