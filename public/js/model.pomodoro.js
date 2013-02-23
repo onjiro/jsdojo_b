@@ -5,6 +5,9 @@ Pomodoro = (function() {
             remainSeconds: 25 * 60 * 1000,
         },
         start: function() {
+            this.trigger('start', {
+                model: this,
+            });
             this.set('status', 'started');
         },
     });
