@@ -12,8 +12,3 @@ AppView = (function() {
     });
 })();
 
-$(function(){
-    
-    var appview = new AppView({el:document});
-    
-});
