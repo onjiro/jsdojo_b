@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------------------------------
+=01 clearfix
+----------------------------------*/
+.cl:after{
+content:" ";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+font-size:0;
+}
+
+.cl{
+display:inline-block;
+min-height:1%;
+}
+
+/* Hides from IE-mac _*/
+* html .cl{height:1%;}
+.cl{display:block;}
+/* End from IE-mac _*/
+
+/* IE6 */
+* html .cl{zoom:1;}
+/* IE7 */
+*:first-child+html .cl{zoom:1;}
+
+
+/*----------------------------------
+=02 reset
+----------------------------------*/
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote{ 
+margin:0;
+padding:0;
+}
+table{
+border-collapse:collapse;
+border-spacing:0;
+}
+
+address,caption,cite,code,dfn,em,th,var{
+font-style:normal;
+font-weight:normal;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-size:100%;
+font-weight:normal;
+}
+
+fieldset,img{
+border:0;
+vertical-align:top;
+}  
+
+ol,ul{
+list-style:none;
+}
+
+q:before,q:after{
+content:'';
+}
+
+abbr,acronym{
+border:0;
+}
+
+a:link{color:#333333;text-decoration:none;}
+a:hover{color:#333333;text-decoration:none;cursor:pointer}
+a:active{color:#333333;text-decoration:none;}
+a:visited{color:#333333;text-decoration:none;}
+a:active,a:focus{outline:none;}
+
+/*  */
+li img,
+dt img,
+dd img{
+vertical-align:bottom;
+}
+
+.clear{
+clear:both;
+height:0;
+line-height:0;
+}
+
+/* IE7 Zoom対策 */
+*{letter-spacing:0}
+
+body{
+font-family:"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,"ＭＳ Ｐゴシック",sans-serif;
+font-size:100%;
+color:#EEEEEE;
+margin:0;
+padding:0;
+text-align:center;
+background:#000000;
+}
+
+/*解析タグエリア*/
+#scriptArea {
+height: 0;
+overflow: hidden;
+}
+
+
+/*----------------------------------
+=03 hack
+----------------------------------*/
+/* firefox3でmargin指定 */
+body,x:-moz-broken{
+margin-left:-1px;
+}
+
+/* IE7でpadding指定 */
+*:first-child+html body{
+padding-left: 1px;
+}
+
+/* IE6以下でpadding指定 */
+*html body{
+padding-left: 1px;
+}
+

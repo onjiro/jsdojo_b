@@ -1,10 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>jsdojo_b</title>
+<meta name="Description" content="">
+<meta name="Keywords" content="">
+
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+<link rel="stylesheet" href="css/index.css" type="text/css" />
 <script src="backbone.js"></script>
 <script src="jquery-1.9.1.js"></script>
 <script src="underscore.js"></script>
+
 </head>
+
 <body>
-Hello, js dojo b team!!
+    <section id="pomodoro_list">
+        <ul id="pomodoro_list_done">
+            <li>done1</li>
+            <li>done2</li>
+            <li>done3</li>
+        </ul>
+        <ul id="pomodoro_list_fail">
+            <li>fail1 12:33</li>
+            <li>fail2 00:30</li>
+            <li>fail3 20:24</li>
+        </ul>
+    </section>
+    <section id="config">
+        <a id="config_button">設定</a>
+        <div id="config_panel">
+            <form>
+                <div id="config_panel_input">
+                    ポモドーロの単位 <input class="form_textinput" placeholder="mm" type="text" />
+                </div>
+                <div id="config_panel_buttons">
+                    <a>保存</a>
+                    <a>キャンセル</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="time">
+        <span id="current_time">11:25</span>
+    </section>
+    <section id="controller">
+        <form>
+            <div>
+                <input class="form_textinput" placeholder="Name" type="text" />
+            </div>
+            <div>
+                <a>スタート！</a>
+            </div>
+        </form>
+    </section>
 </body>
 </html>
