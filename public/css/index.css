@@ -45,12 +45,13 @@
         height:100px;
         background:rgba(255,255,255,0.1);
         border-radius: 2px;
+        z-index:10;
+        
         
         
     }
     #config_panel_input {
         padding-top:10px;
-        
     }
     #config_panel_buttons{
         padding:15px 15px 0 0;

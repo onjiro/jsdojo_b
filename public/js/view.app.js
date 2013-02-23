@@ -1,6 +1,5 @@
 AppView = (function() {
     return Backbone.View.extend({
-        
         events: {
             "click #start-pomodoro" : "startPomodoro"
         },

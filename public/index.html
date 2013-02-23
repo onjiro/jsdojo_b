@@ -13,7 +13,9 @@
 <script src="js/underscore.js"></script>
 <script src="js/backbone.js"></script>
 <script src="js/model.pomodoro.js"></script>
+<script src="js/model.appmodel.js"></script>
 <script src="js/view.app.js"></script>
+<script src="js/view.pomounit.js"></script>
 
 </head>
 
@@ -35,11 +37,11 @@
         <div id="config_panel">
             <form>
                 <div id="config_panel_input">
-                    ポモドーロの単位 <input class="form_textinput" placeholder="mm" type="text" />
+                    ポモドーロの単位 <input id="input_pomounit" class="form_textinput" placeholder="mm" type="text" />
                 </div>
                 <div id="config_panel_buttons">
-                    <a>保存</a>
-                    <a>キャンセル</a>
+                    <a id="save_pomounit">保存</a>
+                    <a id="cancel_pomounit">キャンセル</a>
                 </div>
             </form>
         </div>
