@@ -3,14 +3,15 @@ AppView = (function() {
         events: {
             "click #start-pomodoro" : "startPomodoro"
         },
-        
-        startPomodoro : function(){
-            new CountdownView({
+        initialize: function() {
+            this.currentPomodoro = new CountdownView({
                 model: new Pomodoro({
                     remainSeconds: this.model.pomounit,
                 }),
                 el: $('#current_time'),
             });
+        },
+        startPomodoro : function(){
         }
         
     });
