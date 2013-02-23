@@ -5,8 +5,12 @@ AppView = (function() {
         },
         
         startPomodoro : function(){
-            new Pomodoro({remainSeconds:25 * 60 * 1000});
-            new CountdownView({el:$('#time')});
+            new CountdownView({
+                model: new Pomodoro({
+                    remainSeconds: 25 * 60 * 1000,
+                }),
+                el: $('#current_time'),
+            });
         }
         
     });

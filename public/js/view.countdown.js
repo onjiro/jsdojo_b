@@ -1,14 +1,11 @@
 CountdownView = (function(){
     return Backbone.View.extend({
-        
+        template: _.template('<%= time / 1000 / 60 %>:<%= ("0" + time / 1000 % 60).substring(0, 2) %>'),
         initialize:function(){
-            this.renewTimerHtml('25:00');
+            this.renewTimerHtml(this.model.get('remainSeconds'));
         },
-        
-       // timerHtml : '<span id="current_time">00:11</span>',
         renewTimerHtml : function(currentTime){
-            this.$el.empty();
-            this.$el.append('<span id="current_time">'+currentTime+'</span>');
+            this.$el.text(this.template({time: currentTime}));
         }
         
         
