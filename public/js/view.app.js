@@ -11,6 +11,11 @@ AppView = (function() {
                 }),
                 el: $('#current_time'),
             });
+            this.changeButtonLabel();
+        },
+        
+        changeButtonLabel : function(){
+            $('#start-pomodoro').html('中断！');
         }
         
     });
