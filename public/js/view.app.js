@@ -7,7 +7,7 @@ AppView = (function() {
         startPomodoro : function(){
             new CountdownView({
                 model: new Pomodoro({
-                    remainSeconds: 25 * 60 * 1000,
+                    remainSeconds: this.model.pomounit,
                 }),
                 el: $('#current_time'),
             });
