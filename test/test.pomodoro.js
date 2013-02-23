@@ -7,4 +7,9 @@ describe("Pomodoro", function() {
         var target = new Pomodoro({remainSeconds: 25 * 60 * 1000});
         expect(target.get("remainSeconds")).to.be(25 * 60 * 1000);
     });
+
+    it("初期化時にstartTimeが設定されていないこと", function() {
+        var target = new Pomodoro({remainSeconds: 25 * 60 * 1000});
+        expect(target.get("startTime")).to.be(undefined);
+    });
 });
